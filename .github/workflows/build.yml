@@ -38,7 +38,13 @@ jobs:
           dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
     
       - name: Setup Nuget
-        uses: Nuget/setup-nuget@v1.0.5
+        uses: Nuget/setup-nuget@v1.9.0
+        with:
+                    dotnet-version: 6.0.x
+      - name: Install .NET Core
+        uses: actions/setup-dotnet@v1.9.0
+        with:
+          dotnet-version: 6.0.x
 
       - name: Restore nuget packages
         run: nuget restore FoodWasteProject.sln
