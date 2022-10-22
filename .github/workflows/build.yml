@@ -38,7 +38,7 @@ jobs:
           dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
     
       - name: Setup Nuget
-        uses: Nuget/setup-nuget@v1.9.0
+        uses: Nuget/setup-nuget@v1.0.5
         with:
                     dotnet-version: 6.0.x
       - name: Install .NET Core
