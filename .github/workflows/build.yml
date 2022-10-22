@@ -41,7 +41,7 @@ jobs:
         uses: Nuget/setup-nuget@v1.0.5
 
       - name: Restore nuget packages
-        run: nuget restore MySolution.sln
+        run: nuget restore FoodWasteProject.sln
         
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.0.2
